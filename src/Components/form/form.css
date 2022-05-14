@@ -1,0 +1,30 @@
+
+#section1
+{
+    float : left;
+    display:flex;
+    justify-content: center;
+}
+
+#link
+{
+    height:40px;
+    font-size:16pt;
+}
+
+#go 
+{
+margin-left: 20px;
+}
+
+
+#section2
+{
+  float:left;
+  margin-right: 70%;
+  margin-top: 25px;
+  display:flex;
+  height:40px;
+  font-size:16pt;
+}
+

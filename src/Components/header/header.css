@@ -1,0 +1,48 @@
+#head
+ {
+    display : flex;
+     justify-content : center ;
+    flex-direction : row;
+    margin : 20 px;
+    padding : 20 px;
+    width : 40 px;
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+
+  ul
+   {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(105, 15, 15);
+    color : white;
+    
+  }
+  
+  li
+   {
+    float: left;
+    display: flex;
+    justify-content : space-between ;
+    
+  }
+  
+  li  
+  {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+   
+
+  }
+
+  li:hover 
+  {
+    background-color: #111;
+  }
+
+  
