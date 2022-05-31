@@ -1,4 +1,4 @@
-import "./form.css";
+import "./form.scss";
 
 
 import {useState} from 'react';
@@ -19,7 +19,7 @@ const Form = (props) => {
             method: method,
             url: url
     }
-        props.getForm(data);
+        props.handelApi(data);
 }
   return (
     <>
@@ -35,10 +35,11 @@ const Form = (props) => {
             height="150"
             onChange={handleURL}
           />
-          <button type="submit" id="go">
+          {/* <button type="submit" id="go" onClick={props.handleClick }>
             {" "}
             GO!
-          </button>
+          </button> */}
+          <input className="btn" type="submit" value="Go!" onClick={!props.isloading ? props.handleClick : null} />
         </div>
 
         <div id='section2'>
