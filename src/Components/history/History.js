@@ -12,7 +12,8 @@ function History(props) {
     let arr = e.target.innerText.split(" ");
     let method = arr[0];
     let url = arr[1];
-    let body = {};
+    // eslint-disable-next-line
+    var body ;
     props.historyState.history.forEach((element) => {
         body = element.method === method && element.url === url ? element.body : null;
     });
