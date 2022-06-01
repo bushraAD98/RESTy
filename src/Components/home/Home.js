@@ -1,9 +1,9 @@
-import Header from "../header/Header";
+// import Header from "../header/Header";
 import Form from "../form/Form";
 import Result from "../result/Result";
 import { useState, useEffect } from "react";
 import superagent from 'superagent';
-export default function Home() {
+export default function Home(props) {
     // const [form, setForm] = useState({});
     // function getForm  (form) {
     //   setForm(form);
@@ -20,7 +20,7 @@ export default function Home() {
       setRequest(request);
    
 
-      const response = await superagent[request.method.toLowerCase()](request.url, null);
+      const response = await superagent[request.method.toLowerCase()](request.url, (request.body) ? (request.body) : null);
       let result = { Results: response.body }
       setData(result);
       let header = { Header: response.headers }
@@ -37,9 +37,9 @@ export default function Home() {
     }, [isloading]);
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <h6> homepage 🏠</h6>
-      <Form handelApi={handelApi} handleClick={handleClick} />
+      <Form handelApi={handelApi} handleClick={handleClick} newHistory={props.newHistory} />
             <Result data={data} method={request.method} url={request.url} header={header} isloading={isloading}/>
     </>
   );
